@@ -1,0 +1,42 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1.5rem;
+  min-height: 100vh;
+}
+
+.header {
+  max-width: 800px;
+  text-align: center;
+
+  /* glassy background */
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(12px) saturate(180%);
+
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff; /* white text pops on bg image */
+  margin-bottom: 1.5rem;
+}
+
+.sentence {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #f3f4f6; /* light gray for readability */
+}
+
+/* subtle fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

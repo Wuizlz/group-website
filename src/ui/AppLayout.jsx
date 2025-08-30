@@ -1,27 +1,26 @@
-import {Outlet, useNavigation} from 'react-router-dom'
-import Loader from './Loader';
-import NavBar from './NavBar'
-import Footer from './Footer';
+import { Outlet, useNavigation } from "react-router-dom";
+import Loader from "./Loader";
+import NavBar from "./NavBar";
+import Footer from "./Footer";
+import styles from "./AppLayout.module.css";
 
+function AppLayout() {
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading";
 
-function AppLayout()
-{
-    const navigation = useNavigation();
-    const isLoading = navigation.state === 'loading'
+  console.log(navigation.styles);
 
-    console.log(navigation);
+  return (
+    <div className={styles.layout}>
+      {isLoading && <Loader />}
+      <NavBar />
+      <main>
+        <Outlet />
+      </main>
 
-    return(
-        <div className='layout'>
-            {isLoading && <Loader/>}
-            <NavBar/>
-            <main>
-                <Outlet/>
-            </main>
-
-            <Footer/>
-        </div>
-    )
+      {/* <Footer /> */}
+    </div>
+  );
 }
 
-export default AppLayout
+export default AppLayout;

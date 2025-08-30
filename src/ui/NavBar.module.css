@@ -1,39 +1,66 @@
-/* Overall navbar strip */
+/* navbar sits on top; background is transparent so hero shows through */
 .navbar {
-  border-bottom: 1px solid #e5e7eb; /* subtle border */
-  background-color: white;
-  position: sticky;  /* sticks to top when scrolling */
+  position: sticky;
   top: 0;
-  z-index: 50;       /* stays above other content */
+  z-index: 60;
+  background: transparent;
 }
 
-/* Container centers content */
-.navContainer {
-  max-width: 960px;
+/* page width */
+.container {
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0.5rem 1rem;
+  padding: 1rem; /* spacing from viewport edges */
+}
+
+/* the pill */
+.inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.2); /* very see-through */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px); /* subtle blur keeps it readable */
 }
 
-/* Logo area */
+/* stronger when scrolled */
+.innerScrolled {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: rgba(17, 24, 39, 0.12);
+}
+
+/* logo block */
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.55rem;
   text-decoration: none;
 }
 
 .logoImg {
-  width: 32px;   /* shrink it down */
-  height: 32px;  /* keep square */
-  object-fit: contain; /* keeps aspect ratio without stretching */
+  width: 28px; /* crisp, not huge */
+  height: 28px;
+  object-fit: contain;
 }
-
 
 .logoText {
   font-size: 1rem;
-  font-weight: 600;
-  color: #111;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #0f172a;
+  transition: color 150ms ease, opacity 150ms ease;
+}
+.logo:hover .logoText {
+  color: #1d4ed8;
+}
+
+@media (max-width: 520px) {
+  .logoText {
+    display: none;
+  } /* icon-only on small screens */
 }
