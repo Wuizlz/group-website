@@ -1,0 +1,39 @@
+/* Overall navbar strip */
+.navbar {
+  border-bottom: 1px solid #e5e7eb; /* subtle border */
+  background-color: white;
+  position: sticky;  /* sticks to top when scrolling */
+  top: 0;
+  z-index: 50;       /* stays above other content */
+}
+
+/* Container centers content */
+.navContainer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo area */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+
+.logoImg {
+  width: 32px;   /* shrink it down */
+  height: 32px;  /* keep square */
+  object-fit: contain; /* keeps aspect ratio without stretching */
+}
+
+
+.logoText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+}
