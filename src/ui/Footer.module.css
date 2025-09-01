@@ -1,0 +1,38 @@
+.footer {
+  background: rgba(17, 24, 39, 0.9); /* dark slate */
+  color: #f3f4f6;
+  padding: 2rem 1.5rem;
+}
+
+.footerContainer {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.footerContainerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.footerContainerContent a {
+  color: #f3f4f6;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.footerContainerContent a:hover {
+  color: #60a5fa; /* blue hover */
+}
+
+.iconLink {
+  color: #374151; /* gray-700 */
+  transition: color 150ms ease;
+}
+
+.iconLink:hover {
+  color: #0a66c2; /* LinkedIn blue */
+}

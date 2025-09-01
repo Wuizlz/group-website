@@ -3,10 +3,13 @@ import Loader from "./Loader";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import styles from "./AppLayout.module.css";
+import { useState } from "react";
 
 function AppLayout() {
   const navigation = useNavigation();
   const isLoading = navigation.state === "loading";
+
+  const [footerLinks, setFooterLinks] = useState(null);
 
   console.log(navigation.styles);
 
@@ -15,10 +18,10 @@ function AppLayout() {
       {isLoading && <Loader />}
       <NavBar />
       <main>
-        <Outlet />
+        <Outlet context={{setFooterLinks}} />
       </main>
 
-      {/* <Footer /> */}
+       { footerLinks && <Footer links= {footerLinks} /> }
     </div>
   );
 }

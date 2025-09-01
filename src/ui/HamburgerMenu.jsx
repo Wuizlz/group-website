@@ -39,8 +39,7 @@ export default function HamburgerMenu() {
 
       {open && (
         <div ref={panelRef} role="menu" className={styles.menu}>
-          <div className={styles.section}></div>
-          <div className={styles.sectionTitle}></div>
+          <div className={styles.sectionTitle}> Links</div>
           <Link to="/" className={styles.item} onClick={() => setOpen(false)}>
             {" "}
             Home{" "}
