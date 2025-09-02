@@ -1,5 +1,6 @@
 .main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 4rem 1.5rem;
@@ -15,6 +16,7 @@
   backdrop-filter: blur(12px) saturate(180%);
 
   padding: 2.5rem 2rem;
+  margin: .5rem;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -33,6 +35,26 @@
   font-size: 1.125rem;
   line-height: 1.75;
   color: #f3f4f6; /* light gray for readability */
+}
+
+.list {
+  list-style-type: none;
+  padding: 1rem 1rem;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.002); 
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.105);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: #f9fafb; /* light gray for readability */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+.listItem {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
 }
 
 /* subtle fade in */

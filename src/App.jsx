@@ -4,13 +4,16 @@ import AppLayout from "./ui/AppLayout";
 import Home from "./pages/Home";
 import Daniel from "./pages/Daniel";
 import Dimitri from "./pages/Dimitri";
+import Nick from "./pages/Nick"
 const router = createBrowserRouter(
   [
     {
       element: <AppLayout />,
       children: [{ index: true, element: <Home /> },
-        {path: "/Daniel" , element: <Daniel/>},
-        {path: "/Dimitri" , element: <Dimitri/>}
+        {path: "daniel" , element: <Daniel/>},
+        {path: "dimitri" , element: <Dimitri/>},
+        {path: "nick", element: <Nick/>},
+        // {path: "krish", element: <Krish/>}
       ],
 
     },

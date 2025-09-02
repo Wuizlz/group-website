@@ -13,6 +13,8 @@ export default function HamburgerMenu() {
     { to: "/", label: "Home" },
     { to: "/Daniel", label: "Daniel" },
     { to: "/Dimitri", label: "Dimitri" },
+    { to: "/Nick" , label: "Nick"},
+    // {to: "/Krish", label: "Krish"}
   ];
 
   useEffect(() => {
