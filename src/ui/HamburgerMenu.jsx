@@ -13,8 +13,8 @@ export default function HamburgerMenu() {
     { to: "/", label: "Home" },
     { to: "/Daniel", label: "Daniel" },
     { to: "/Dimitri", label: "Dimitri" },
-    { to: "/Nick" , label: "Nick"},
-    // {to: "/Krish", label: "Krish"}
+    { to: "/Nick", label: "Nick" },
+    { to: "/Krish", label: "Krish" },
   ];
 
   useEffect(() => {
@@ -50,9 +50,9 @@ export default function HamburgerMenu() {
       {open && (
         <div ref={panelRef} role="menu" className={styles.menu}>
           <div className={styles.sectionTitle}> Links</div>
-          {links.map((link) => {
-            const isActive = location.pathname === link.to;
-            return (
+          {links
+            .filter((link) => link.to !== location.pathname)
+            .map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
@@ -61,13 +61,11 @@ export default function HamburgerMenu() {
                     ? `${styles.item} ${styles.active}`
                     : styles.item
                 }
-                aria-current={isActive ? "page" : undefined}
                 onClick={() => setOpen(false)}
               >
                 {link.label}
               </Link>
-            );
-          })}
+            ))}
         </div>
       )}
     </div>

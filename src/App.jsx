@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Daniel from "./pages/Daniel";
 import Dimitri from "./pages/Dimitri";
 import Nick from "./pages/Nick"
+import Krish from "./pages/Krish";
 const router = createBrowserRouter(
   [
     {
@@ -13,7 +14,7 @@ const router = createBrowserRouter(
         {path: "daniel" , element: <Daniel/>},
         {path: "dimitri" , element: <Dimitri/>},
         {path: "nick", element: <Nick/>},
-        // {path: "krish", element: <Krish/>}
+        {path: "krish", element: <Krish/>}
       ],
 
     },
