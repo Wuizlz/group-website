@@ -51,6 +51,13 @@ export default function HamburgerMenu() {
           >
             Daniel
           </Link>
+          <Link
+            to="/Dimitri"
+            className={styles.item}
+            onClick={() => setOpen(false)}
+          >
+            Dimitri
+          </Link>
         </div>
       )}
     </div>
