@@ -3,12 +3,14 @@ import AppLayout from "./ui/AppLayout";
 
 import Home from "./pages/Home";
 import Daniel from "./pages/Daniel";
+import Krish from "./pages/Krish";
 const router = createBrowserRouter(
   [
     {
       element: <AppLayout />,
       children: [{ index: true, element: <Home /> },
-        {path: "/Daniel" , element: <Daniel/>}, 
+        {path: "/Daniel" , element: <Daniel/>},
+        {path: "/Krish" , element: <Krish/>} 
       ],
 
     },
