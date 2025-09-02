@@ -1,4 +1,4 @@
-import styles from "./AppLayout.module.css";
+import styles from "./Footer.module.css";
 import PropTypes from "prop-types";
 
 export default function Footer({ links }) {
@@ -15,8 +15,8 @@ export default function Footer({ links }) {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="40"
+              height="40"
               fill="currentColor"
               viewBox="0 0 24 24"
               className={styles.icon}
@@ -44,8 +44,8 @@ export default function Footer({ links }) {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="40"
+              height="40"
               fill="currentColor"
               viewBox="0 0 24 24"
               className={styles.icon}

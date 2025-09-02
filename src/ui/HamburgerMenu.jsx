@@ -1,11 +1,19 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./HamburgerMenu.module.css";
 
 export default function HamburgerMenu() {
   const [open, setOpen] = useState(false);
   const btnRef = useRef(null);
   const panelRef = useRef(null);
+
+  const location = useLocation();
+
+  const links = [
+    { to: "/", label: "Home" },
+    { to: "/Daniel", label: "Daniel" },
+    { to: "/Dimitri", label: "Dimitri" },
+  ];
 
   useEffect(() => {
     function onClick(e) {
@@ -24,7 +32,7 @@ export default function HamburgerMenu() {
   }, [open]);
 
   return (
-    <div className={ styles.wrapper}>
+    <div className={styles.wrapper}>
       <button
         ref={btnRef}
         aria-haspopup="menu"
@@ -40,26 +48,28 @@ export default function HamburgerMenu() {
       {open && (
         <div ref={panelRef} role="menu" className={styles.menu}>
           <div className={styles.sectionTitle}> Links</div>
-          <Link to="/" className={styles.item} onClick={() => setOpen(false)}>
-            {" "}
-            Home{" "}
-          </Link>
-          <Link
-            to="/Daniel"
-            className={styles.item}
-            onClick={() => setOpen(false)}
-          >
-            Daniel
-          </Link>
-          <Link
-            to="/Dimitri"
-            className={styles.item}
-            onClick={() => setOpen(false)}
-          >
-            Dimitri
-          </Link>
+          {links.map((link) => {
+            const isActive = location.pathname === link.to;
+            return (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={
+                  location.pathname === link.to
+                    ? `${styles.item} ${styles.active}`
+                    : styles.item
+                }
+                aria-current={isActive ? "page" : undefined}
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
       )}
     </div>
   );
 }
+
+// .filter((link) => link.to !== location.pathname)
