@@ -6,8 +6,9 @@ export default function Krish() {
   const { setFooterLinks } = useOutletContext();
 
   useEffect(() => {
-    
-    setFooterLinks(null);
+    setFooterLinks({
+      github: "https://github.com/kprajapati08",
+    });
     return () => setFooterLinks(null);
   }, [setFooterLinks]);
 
