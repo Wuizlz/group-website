@@ -17,12 +17,16 @@ export default function Daniel() {
       <div className={styles.header}>
         <h1 className={styles.title}>Nick Steltzner</h1>
         <p className={styles.sentence}>
-            My name is Nick Steltzner, and I am a junior at Purdue Northwest University pursuing a degree in Computer Science
-             with a concentration in AI Studies and a minor in Cybersecurity. As a developer, I actively seek opportunities to 
-             learn and grow my skills. Currently, I am focused on expanding my knowledge of React Native, TypeScript, JavaScript, 
-             Java, and Python. I am passionate about building a career in software development and eventually transitioning into DevOps. 
-             Through clear communication, strong programming practices, and effective teamwork, I strive to create impactful projects 
-             that contribute to making the world a better place!
+            My name is Nick Steltzner, and I am a junior at Purdue Northwest University pursuing a degree 
+            in Computer Science with a concentration in AI Studies and a minor in Cybersecurity. I am currently 
+            working to improve my skills in React Native, TypeScript, Java, and Python, with the goal of building a 
+            career in software development and eventually transitioning into DevSecOps. On this project, 
+            I contributed by enhancing visual and textual elements to ensure a smooth and friendly user experience. 
+            Through clear communication, strong programming practices, and effective teamwork, I strive to create 
+            impactful projects that will a positive difference in the world! Feel free to check out my socials below!
+          </p>
+          <p className={styles.sentence}>
+            Email me: Nsteltzn@pnw.edu
           </p>
       </div>
       <div className={styles.header}>
