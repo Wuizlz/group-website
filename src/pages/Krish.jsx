@@ -17,8 +17,8 @@ export default function Krish() {
       <div className={styles.header}>
         <h1 className={styles.title}>Krish Prajapati</h1>
         <p className={styles.sentence}>
-          I’m Krish Prajapati a computer science student who enjoys building
-          projects that connect theory with real world use. I’m focused on
+          I'm Krish Prajapati a computer science student who enjoys building
+          projects that connect theory with real world use. I'm focused on
           improving my skills in web development and mobile apps while also
           exploring areas like cybersecurity and AI. My goal is to grow as a
           developer through hands on projects and teamwork, creating solutions
@@ -26,7 +26,6 @@ export default function Krish() {
         </p>
       </div>
 
-      {/* Wrap Skills + Role in a flex container */}
       <div className={styles.sectionContainer}>
         <div className={styles.sectionBox}>
           <h1 className={styles.title}>Skills</h1>

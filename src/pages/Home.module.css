@@ -63,17 +63,17 @@
   max-width: 800px;
   justify-content: center;   /* centers content */
   align-items: stretch;      /* makes boxes equal height */
-  gap: 20px;                 /* space between boxes */
-  margin-top: 2rem;
+
 }
 
 .sectionBox {
   flex: 1;                   /* equal width */
   padding: 20px;
   max-width: 800px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
+  margin-top: 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(12px) saturate(180%);
   text-align: center;
 }
 
