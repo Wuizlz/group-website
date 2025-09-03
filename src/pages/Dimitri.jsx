@@ -23,7 +23,35 @@ export default function Dimitri() {
           I’ve developed projects like a portfolio website and a calculator using HTML, CSS, and JavaScript, 
           and hold certifications in JavaScript, Python, CompTIA A+, and CompTIA Network+. 
           My education at PNW has equipped me with a solid foundation in programming, data structures, and algorithms, 
-          which I am eager to apply in real-world settings.
+          which I am eager to apply in real-world settings. 
+        </p>
+      </div>
+      <div className={styles.header}>
+        <h1 className={styles.title}>Certifications & Skills</h1>
+        <ul className={styles.list}>
+          <li className={styles.listItem}>
+            <strong>Certifications:</strong> JavaScript (SoloLearn), Python (SoloLearn), CompTIA A+, CompTIA Network+
+          </li>
+        </ul>
+
+        <ul className={styles.list}>
+          <li className={styles.listItem}>
+            <strong>Languages:</strong> Java, JavaScript, Python, HTML, CSS
+          </li>
+          <li className={styles.listItem}>
+            <strong>Tools:</strong> Git, GitHub, Linux, VsCode, ChatGPT, Copilot
+          </li>
+          <li className={styles.listItem}>
+            <strong>Databases:</strong> MySQL (learning)
+          </li>
+        </ul>
+      </div>
+      <div className={styles.header}>
+        <h1 className={styles.title}>Role</h1>
+        <p className={styles.sentence}>
+          In this project, I contributed ideas to the overall design and functionality of the website. 
+          I also worked mostly on my page of the website, 
+          focusing on the content and layout to effectively showcase my background and skills. 
         </p>
       </div>
     </main>
